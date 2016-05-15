@@ -1,0 +1,24 @@
+{
+  "name": "webfavs",
+  "version": "1.0.0",
+  "description": "a place to store your web favorites",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "latest",
+    "bower": "^1.7.9",
+    "express": "latest",
+    "mongoose": "latest",
+    "nodemon": "latest",
+    "lodash": "latest"
+  },
+
+  "engines": {
+    "node": "4.1.1"
+  },
+
+  "author": "Hunter Walker",
+  "license": "ISC"
+}

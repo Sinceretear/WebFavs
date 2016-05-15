@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="container">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="col-sm-4">
+        <a href="#/websites" class="btn btn-primary">Go Back</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="#" class="btn btn-primary" ng-click="removeWebsite(website._id)">Delete</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="#/websites/edit/{{website._id}}" class="btn btn-primary">Edit</a>
+      </div>
+
+
+            <div class="col-sm-8" ng-init="getWebsite()">
+                <h2>{{website.name}}</h2>
+        				<p>{{website.info}}</p>
+        				<p>{{website.mainImg}}</p>
+                <p>{{website.thumbnailImg}}</p>
+                <p>{{website.faviconImg}}</p>
+                <p>{{website.description}}</p>
+                <p>{{website.category}}</p>
+            </div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div ng-app="myApp" ng-controller="WebsitesController">
+
+      <div class="row" ng-init="getWebsites()">
+        <div class="container paddingTopBottom">
+          <div ng-repeat="website in websites | limitTo: 3">
+            <div class="col-xs-12 col-sm-4">
+              <img ng-src="{{website.mainImg}}" style="width: 100%; height: auto;" alt="" />
+              <br>
+              <div class="col-xs-4" style="padding-left: 0px;">
+                <h3 style="font-weight: 500; margin-bottom: 5px;">{{website.name}}</h3>
+                <h4 style="font-weight: 500; margin-top: 5px; color: #878787;">{{website.info}}</h4>
+                <br>
+                <a class="btn btn-primary" href="#/websites/details/{{website._id}}">Edit</a>
+              </div>
+              <div class="col-xs-8">
+                <p style="margin-top: 20px; font-size: 14px;">
+                  {{website.description}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+<div class="row" ng-controller="WebsitesController">
+  <div class="container" ng-init="sortedWebsites()">
+    <div class="col-xs-12 paddingTopBottomLess">
+      <h3>Everday</h3>
+    </div>
+    <div ng-repeat="x in websiteArray | filter: { category:'Everyday' }">
+      <div class="col-xs-12 col-sm-3">
+        <img ng-src="{{x.thumbnailImg}}" style="width: 100%; height: auto;" alt="" />
+        <br>
+        <div class="col-xs-4">
+          <h3 style="font-weight: 500; margin-bottom: 5px;">{{x.name}}</h3>
+          <h4 style="font-weight: 500; margin-top: 5px; color: #878787;">{{x.info}}</h4>
+          <!-- <a class="btn btn-primary" href="#/websites/details/{{x._id}}">Edit</a> -->
+        </div>
+        <div class="col-xs-8 text-right">
+          <img ng-src="{{x.faviconImg}}" style="max-width: 115px; height: auto; margin-top: 15px;" alt="" />
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="websites.js"></script>

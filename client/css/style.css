@@ -1,0 +1,855 @@
+/*
+Theme Name: Titan
+Theme URI: http://underscores.me/
+Author: J. Mayfield, Director of Web Development at Titan Web Marketing Solutions, Inc.
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.2.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: titan
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Titan is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Google Fonts
+# Typography
+# Elements
+# Forms
+# Links
+# Accessibility
+# Images
+# Custom Helper Classes
+# Hover
+# Footer
+# Margins
+# Desktop
+# Mobile
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+
+html {
+	font-family: 'Catamaran', sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+body {
+	font-size: 10px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+	font-size: 30;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+	font-size: 22px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+	font-size: 12px;
+	font-weight: 400;
+	font-family: 'Roboto', sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Custom Post Author
+--------------------------------------------------------------*/
+
+.postauthor {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border: 2px dashed #DDDDDD;
+    overflow: hidden;
+    padding: 10px;
+    width: 100%;
+}
+.postauthor img {
+    border: 3px solid #DDDDDD;
+    float: left;
+    margin-right: 15px;
+}
+.postauthor h4 {
+    color: #666666;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.postauthor p {
+    color: #515151;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 12px;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5rem;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5rem 3rem;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5rem 1.5rem;
+}
+
+/*--------------------------------------------------------------
+# Blogs
+--------------------------------------------------------------*/
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 0px;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+a {
+	color: royalblue;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: midnightblue;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Images
+--------------------------------------------------------------*/
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	width: 100%; /* Adhere to container width. */
+}
+
+/*--------------------------------------------------------------
+# Custom Helper Classes
+--------------------------------------------------------------*/
+
+.white  {
+	color: #FFFFFF;
+}
+
+.gray {
+	color: #6D6E71;
+}
+
+.red {
+	color:#EC2634;
+}
+
+.purple {
+	color:#6669FC;
+}
+
+.lavender {
+	color: #A9B1FF;
+}
+
+.turquoise {
+	color: #6CCFE7;
+}
+
+.orange {
+	color: #F99338;
+}
+
+.yellow {
+	color: #FCC536;
+}
+
+.graybg {
+	background-color: #ECECEC;
+}
+
+.turquoisebg {
+	background-color: #6CCFE7;
+}
+.orangebg {
+	background-color: #F99338;
+}
+
+.pt1 {
+	padding-top: 1rem;
+}
+
+.pb1 {
+	padding-bottom: 1rem;
+}
+
+.pt3 {
+	padding-top: 3rem;
+}
+
+.pb3 {
+	padding-bottom: 3rem;
+}
+
+.pt5 {
+	padding-top: 5rem;
+}
+
+.pb5 {
+	padding-bottom: 5rem;
+}
+
+.mt1 {
+	margin-top: 1rem;
+}
+
+.mb1 {
+	margin-bottom: 1rem;
+}
+
+.mb2 {
+	margin-bottom: 2rem;
+}
+
+.mt3 {
+	margin-top: 3rem;
+}
+
+.mb3 {
+	margin-bottom: 3rem;
+}
+
+.mt5 {
+	margin-top: 5rem;
+}
+
+.mb5 {
+	margin-bottom: 5rem;
+}
+
+.nopad {
+	padding: 0px;
+}
+
+
+/*--------------------------------------------------------------
+## Hover
+--------------------------------------------------------------*/
+
+/* Pop */
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+
+.site-sub-footer {
+	font-size: 12px !important;
+}
+
+/*--------------------------------------------------------------
+## Margins
+--------------------------------------------------------------*/
+
+.row {
+	margin-left:0;
+	margin-right:0;
+}
+
+/*--------------------------------------------------------------
+## Desktop
+--------------------------------------------------------------*/
+@media (min-width: 993px) and (max-width: 1200px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+}
+
+@media (min-width: 1201px) {
+
+
+}
+
+@media (min-width:768px) {
+	.mobile {
+		display: none!important;
+	}
+
+	.desktop {
+		display: block;
+		margin-top:1%;
+		margin-bottom:1%;
+	}
+
+	.navbar {
+		margin-bottom: 0px;
+	}
+
+	.navbar-default .navbar-nav>li>a {
+		color: gray;
+		font-size: 1.5em;
+		font-family: font-family: 'Roboto', sans-serif;
+	}
+
+	.navbar-default .navbar-nav li a:hover {
+		text-decoration: underline;
+	}
+
+	.navbar-nav li a {
+		text-align: right;
+		padding: .5em 1em !important;
+	}
+
+	.navbar-default {
+		padding-top: 1em;
+		border: 0;
+		background-color: transparent;
+	}
+	.social {
+		font-size: 1em;
+		padding-top: 1em;
+	}
+
+	.social a img:hover {
+		opacity: .7;
+	}
+
+	.phone {
+		font-family: font-family: 'Roboto', sans-serif;
+		font-size: 1.5em;
+	}
+}
+
+/*--------------------------------------------------------------
+## Mobile
+--------------------------------------------------------------*/
+
+@media (max-width:768px) {
+	.mobile-center {
+		text-align:center;
+		margin: 0 auto;
+		float: none;
+	}
+
+	.desktop {
+		display:none;
+	}
+
+	.mobile {
+		display: block;
+	}
+	.logo img {
+		margin-bottom: 3%;
+	}
+
+	.social {
+		font-size: 1em;
+	}
+
+	.social a {
+		font-size: 1em;
+	}
+
+	.phone {
+		font-size: 1em;
+	}
+
+	.navbar {
+		margin: 0px;
+		font-size: 1em;
+	}
+
+	.navbar-default {
+		border: none;
+		background-color: transparent;
+	}
+
+	.navbar-nav li a {
+		font-size: 1em;
+		background-color: gray;
+		color: white;
+		padding: 5px 15px;
+		text-align: center;
+	}
+
+	.nav  li {
+	    position: relative;
+	    display: block;
+	    text-align: left;
+	    padding-left: 10%;
+	}
+
+	.navbar-nav {
+	    margin: 1em;
+			width: 83%;
+	}
+
+	.navbar-nav .active a, .navbar-default .navbar-nav .active a  {
+		background-color: midnightblue;
+		color: white;
+		text-decoration: underline;
+	}
+
+	.nav .open  a {
+		background-color: black;
+		color: white;
+		text-decoration: underline;
+	}
+
+	.navbar-collapse {
+		position: absolute;
+	  z-index: 1000;
+	  background-color: orange;
+	  width: 100%;
+		min-height: 260px;
+	  float: none;
+		color: white;
+	}
+
+	.navbar-toggle {
+		margin: 15px 10px 0px 0px;
+		background-color: transparent;
+	}
+
+	.first-bar, .third-bar {
+	  transition: all 0.35s linear;
+	  transform: rotate(0deg);
+	  transform-origin: 40% 50%;
+	}
+
+	.first-bar {
+		height: 3px;
+		background-color: white;
+		display: block;
+		border-radius: 1em;
+		width: 2em;
+		-ms-webkit-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+		border: 0px;
+	}
+
+	.third-bar {
+		height: 3px;
+		background-color: white;
+		display: block;
+		border-radius: 1em;
+		width: 2em;
+		-ms-webkit-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		border: 0px !important;
+	}
+
+	.hamburger {
+	  float: right;
+	  padding: 2em .5em;
+		cursor: pointer;
+	}
+}
+
+.paddingTopBottom {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.paddingTopBottomLess {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+/* this styles placeholder text for gravity forms*/
+
+::-webkit-input-placeholder {
+   color: red;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: red;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;
+}
+
+:-ms-input-placeholder {
+   color: red;
+}
