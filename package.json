@@ -4,6 +4,7 @@
   "description": "a place to store your web favorites",
   "main": "app.js",
   "scripts": {
+    "start": "mongod & nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
