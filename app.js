@@ -111,7 +111,7 @@ app.delete('/api/websites/:_id', function(req, res) {
   });
 });
 
-
-
-app.listen(5000);
-console.log('running on port 3k');
+var server = app.listen(process.env.PORT || 3000, function () {
+   var port = server.address().port;
+   console.log("App now running on port", port);
+ });
