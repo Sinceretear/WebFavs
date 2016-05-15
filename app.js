@@ -10,7 +10,17 @@ Category = require('./models/categories')
 Website = require('./models/websites')
 
 //Connect to mongoose
-mongoose.connect('mongodb://localhost/favoritewebsites');
+
+var uri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/favoritewebsites';
+
+mongoose.connect(uri, function (err, res) {
+    if (err) {
+      console.log ('ERROR connecting to: ' + uri + '. ' + err);
+    } else {
+      console.log ('Succeeded connected to: ' + uri);
+    }
+});
+
 var db = mongoose.connection;
 
 
