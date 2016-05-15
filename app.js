@@ -11,7 +11,7 @@ Website = require('./models/websites')
 
 //Connect to mongoose
 
-var uri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/favoritewebsites';
+var uri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://heroku_xf2p7455:aop2ags14m0sqsim1kk693e393@ds023452.mlab.com:23452/heroku_xf2p7455' || 'mongodb://localhost/favoritewebsites';
 
 mongoose.connect(uri, function (err, res) {
     if (err) {
